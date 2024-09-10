@@ -38,6 +38,8 @@ function changeGrid () {
             grid.removeChild(div)
         })
         createGrid(Number(input))
+        const button = document.querySelector(".gridButton")
+        button.textContent = `Click me to change the dimension of the grid (actual: ${input}x${input})`
     }
 }
 
