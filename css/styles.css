@@ -9,16 +9,23 @@
 body {
     padding: 2vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gridButton {
+    text-align: center;
+    padding: 8px 16px;
+    margin: 10px;
 }
 
 .grid {
     width: 640px;
+    height: 640px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .grid-element {
-    padding: 19px;    
     border: 1px solid black;
 }
