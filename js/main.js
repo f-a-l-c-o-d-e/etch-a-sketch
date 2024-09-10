@@ -12,10 +12,18 @@ function createGrid (numberOfDivsForSide=16) {
     
     function paintGrid () {
         const gridElements = document.querySelectorAll(".grid-element")
-    
+        
+        function randomColor() {
+            let r = Math.floor(Math.random() * 256)
+            let g = Math.floor(Math.random() * 256)
+            let b = Math.floor(Math.random() * 256)
+
+            return `rgb(${r},${g},${b})`
+        }
+
         gridElements.forEach((div) => {
             div.addEventListener("mouseover", () => {
-                div.style.backgroundColor = "red"
+                div.style.backgroundColor = randomColor()
                 setTimeout(() => {
                     div.style.backgroundColor = "white"
                 }, 500)
@@ -43,11 +51,8 @@ function changeGrid () {
     }
 }
 
-const button = document.querySelector(".gridButton")
-
-
-
 
 createGrid(16)
 
+const button = document.querySelector(".gridButton")
 button.addEventListener("click", () => changeGrid())
