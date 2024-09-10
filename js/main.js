@@ -22,11 +22,14 @@ function createGrid (numberOfDivsForSide=16) {
         }
 
         gridElements.forEach((div) => {
+            let opacity = 0
+            let color = randomColor()
             div.addEventListener("mouseover", () => {
-                div.style.backgroundColor = randomColor()
-                setTimeout(() => {
-                    div.style.backgroundColor = "white"
-                }, 500)
+                div.style.backgroundColor = color
+                div.style.opacity = `${opacity}`
+                if (opacity <= 1) {
+                    opacity += 0.1
+                }
             })
         })
     }
