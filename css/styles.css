@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-element {
+    padding: 19px;    
+    border: 1px solid black;
+}
